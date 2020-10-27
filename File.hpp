@@ -8,27 +8,30 @@
 #include<iostream>
 #include<string>
 
-//#include"Node.hpp"
-//#include"FileSystem.hpp"
-//#include"Directory.hpp"
+using namespace std;
+
 #include "Node.hpp"
 
-using namespace std;
 
 class File : public Node
 {
+    friend class Directory;
 private:
     /* data */
     string content;
-public:
-    //TODO: la derniere phrase qst1 FILE
     File(FileSystem *fs, int uid, string name,Directory *parent);
     ~File();
+public:
+    //TODO: la derniere phrase qst1 FILE
+
     string get_content();
     void set_content(const std::string& str);
-    bool is_directory();
-    Directory* to_directory();
-    File* to_file();
-    int size();
+    bool is_directory() override;
+    Directory* to_directory() override;
+    File* to_file() override;
+    int size() override;
+    void print_to(std::ostream &os, int valeur) override;
+
+
 };
 #endif //TRAVAIL2_FILE_HPP

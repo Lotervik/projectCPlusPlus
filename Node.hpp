@@ -6,24 +6,31 @@
 #define TRAVAIL2_NODE_HPP
 #include<iostream>
 #include<string>
-#include "FileSystem.hpp"
+
 
 using namespace std;
-class Directory;
+
+
 class File;
+class Directory;
+class FileSystem;
 
 class Node
 {
-    friend class Directory;
-private:
+
+protected:
     FileSystem *fs;
     int uid;
     string name;
     Directory *parent;
-public:
-    //TODO : qst2 NODE
-    Node(FileSystem *fs, int uid, string name,Directory *parent = nullptr);
+
+    Node(FileSystem *fs, int uid, string name, Directory *parent = nullptr);
     ~Node();
+
+    virtual void print_to(std::ostream &os, int valeur) = 0;
+
+public:
+
     string get_name();
     virtual bool is_directory()= 0;
     virtual Directory* to_directory() = 0;

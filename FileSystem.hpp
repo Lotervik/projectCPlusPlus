@@ -8,9 +8,9 @@
 #include<string>
 #include<list>
 
-
 using namespace std;
-class Directory;
+
+#include "Directory.hpp"
 
 class FileSystem
 {
@@ -21,8 +21,7 @@ private:
     string name;
     Directory *root;
     list<int> UidList;
-    int uid;
-    //TODO :
+    int uid = 0;
     int get_fresh_uid();
 
 public:
@@ -30,6 +29,8 @@ public:
     ~FileSystem();
     string get_name();
     Directory* get_root();
+    static int getuid();
+    friend ostream &operator<<(ostream &os, FileSystem &fileSystem);
 
 
 };

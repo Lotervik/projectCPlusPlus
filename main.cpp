@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    /*
+
     FileSystem fs("ramfs");
 
     // QUELQUES TESTS
@@ -121,6 +121,6 @@ int main()
     //  + directory: "dirB", uid: 6, size: 32
     //   + file: "fileBA", uid: 7, size: 16, content: "This is file BA."
     //   + file: "fileBB", uid: 8, size: 16, content: "This is file BB."
-    // (les uid peuvent être différents des vôtres)*/
+    // (les uid peuvent être différents des vôtres)
     return 0;
 }

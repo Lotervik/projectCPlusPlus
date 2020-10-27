@@ -38,3 +38,17 @@ int File::size()
 {
     return content.length();
 }
+
+File::~File() {
+    //TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+}
+
+void File::print_to(std::ostream &os, int valeur) {
+    string ch = "";
+    for (int i = 0; i < valeur; i++) {
+        ch+= " ";
+    }
+
+    os << ch+ + "+ file: \""+name+"\", uid: "+to_string(uid)+", size: "+to_string(size())+", content: "+ content <<std::endl;
+}

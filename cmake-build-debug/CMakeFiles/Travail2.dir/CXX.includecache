@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/patrick/CLionProjects/Travail2/Directory.cpp
-Directory.hpp
-/home/patrick/CLionProjects/Travail2/Directory.hpp
-File.hpp
-/home/patrick/CLionProjects/Travail2/File.hpp
-
 /home/patrick/CLionProjects/Travail2/Directory.hpp
 iostream
 -
@@ -19,6 +13,10 @@ vector
 -
 Node.hpp
 /home/patrick/CLionProjects/Travail2/Node.hpp
+File.hpp
+/home/patrick/CLionProjects/Travail2/File.hpp
+FileSystem.hpp
+/home/patrick/CLionProjects/Travail2/FileSystem.hpp
 
 /home/patrick/CLionProjects/Travail2/File.hpp
 iostream
@@ -27,6 +25,10 @@ string
 -
 Node.hpp
 /home/patrick/CLionProjects/Travail2/Node.hpp
+
+/home/patrick/CLionProjects/Travail2/FileSystem.cpp
+FileSystem.hpp
+/home/patrick/CLionProjects/Travail2/FileSystem.hpp
 
 /home/patrick/CLionProjects/Travail2/FileSystem.hpp
 iostream
@@ -35,12 +37,12 @@ string
 -
 list
 -
+Directory.hpp
+/home/patrick/CLionProjects/Travail2/Directory.hpp
 
 /home/patrick/CLionProjects/Travail2/Node.hpp
 iostream
 -
 string
 -
-FileSystem.hpp
-/home/patrick/CLionProjects/Travail2/FileSystem.hpp
 

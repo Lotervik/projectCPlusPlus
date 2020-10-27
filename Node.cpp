@@ -14,3 +14,8 @@ Node::Node(FileSystem *fs, int uid, string name,Directory *parent):fs(fs),uid(ui
 {
 
 }
+
+Node::~Node()
+{
+    delete this;
+}

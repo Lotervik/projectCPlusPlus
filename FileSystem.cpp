@@ -4,9 +4,12 @@
 
 #include "FileSystem.hpp"
 
+
+
 FileSystem::~FileSystem()
 {
-
+    delete root;
+    delete this;
 }
 
 string FileSystem::get_name()
@@ -25,10 +28,18 @@ Directory* FileSystem::get_root()
 FileSystem::FileSystem(string name): name(name)
 {
 
+    root = new Directory(this,this->get_fresh_uid(),"root", nullptr);
+
 }
 
 int FileSystem::get_fresh_uid()
 {
-    uid++;
-    return uid;
+    return uid++;
 }
+
+ostream &operator<<(ostream &os,  FileSystem &fileSystem) {
+    os << "filesystem " << fileSystem.name <<std::endl;
+    fileSystem.get_root()->print_to(os,0);
+    return os;
+}
+
